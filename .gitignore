@@ -43,4 +43,4 @@ test-results/
 *.lcov
 *.user
 *.code-workspace
-pnpm-lock.yaml
+pnpm-lock.yaml.MGXEnv.json
