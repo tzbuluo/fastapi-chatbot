@@ -7,8 +7,12 @@ import random
 app = FastAPI()
 
 # 加载训练数据
-with open('/data/chats/mn0vvd/workspace/training_data.json', 'r') as f:
-    training_data = json.load(f)
+try:
+    with open('training_data.json', 'r', encoding='utf-8') as f:
+        training_data = json.load(f)
+except:
+    # 如果无法加载训练数据，使用空列表
+    training_data = []
 
 class ChatRequest(BaseModel):
     user_input: str
