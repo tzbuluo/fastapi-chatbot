@@ -1,0 +1,13 @@
+classDiagram
+    class DataProcessor {
+        +process_csv(file_path: str) -> dict
+    }
+    class DeepSeekAPI {
+        +train_model(data: dict) -> str
+        +generate_response(session_id: str, model_id: str, user_input: str) -> dict
+    }
+    class ChatAPI {
+        +handle_chat_request(request: ChatRequest) -> dict
+    }
+    DataProcessor --> DeepSeekAPI
+    ChatAPI --> DeepSeekAPI

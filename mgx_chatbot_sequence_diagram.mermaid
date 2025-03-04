@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant DP as DataProcessor
+    participant DS as DeepSeekAPI
+    participant CA as ChatAPI
+    participant P as Protopie
+    DP->>DS: train_model(data)
+    DS-->>DP: model_id
+    P->>CA: handle_chat_request(request)
+    CA->>DS: generate_response(session_id, model_id, user_input)
+    DS-->>CA: response
+    CA-->>P: response
