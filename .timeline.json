@@ -179,7 +179,10 @@
       "timeline_index": 62,
       "version": "v16",
       "status": "initializing",
-      "logs": []
+      "logs": [
+        "\n",
+        "INFO:     Will watch for changes in these directories: ['/data/chats/mn0vvd/workspace']\n"
+      ]
     }
   },
   "deploy": {},
